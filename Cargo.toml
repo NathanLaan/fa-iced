@@ -1,0 +1,10 @@
+[package]
+name = "fa-iced"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+authors = ["Nathan Laan"]
+description = "A Font Awesome library written in Rust for the iced UI framework."
+
+[dependencies]
+iced = {version = "0.13.1", features = ["advanced"] }
