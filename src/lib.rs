@@ -82,3 +82,9 @@ pub const FA_ICON_7: &str = "37";
 pub const FA_ICON_8: &str = "38";
 pub const FA_ICON_9: &str = "39";
 
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/circle-check
+pub const FA_ICON_CIRCLE_CHECK: &str = "f058";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/circle-xmark
+pub const FA_ICON_CIRCLE_XMARK: &str = "f057";
