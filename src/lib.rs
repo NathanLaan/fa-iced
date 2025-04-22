@@ -9,6 +9,8 @@ use iced::advanced::graphics::text::font_system;
 use iced::{Element, Font};
 use iced::font::Family;
 use iced::widget::text;
+use std::fmt;
+use std::str::FromStr;
 
 ///
 /// Load Font Awesome files. Should only be called once.
@@ -124,3 +126,62 @@ pub const FA_ICON_GEAR: &str = "f013";
 
 /// Font Awesome Unicode string for https://fontawesome.com/icons/screwdriver-wrench
 pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
+
+
+///
+/// Implementation of Font Awesome icons as enum.
+///
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum FaIcon {
+    User,
+    CircleCheck,
+    CircleXmark,
+    ScrewdriverWrench,
+    Gear,
+    Bars,
+    New,
+    Open,
+    Save,
+    Number0,
+    Number1,
+    Number2,
+    Number3,
+    Number4,
+    Number5,
+    Number6,
+    Number7,
+    Number8,
+    Number9,
+}
+
+impl fmt::Display for FaIcon {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.write_str(self.as_str())
+    }
+}
+
+impl FaIcon {
+    pub fn as_str(&self) -> &str {
+        match self {
+            FaIcon::User => "f007",
+            FaIcon::CircleCheck => "f058",
+            FaIcon::CircleXmark => "f057",
+            FaIcon::ScrewdriverWrench => "f7d9",
+            FaIcon::Gear => "f013",
+            FaIcon::Bars => "f0c9",
+            FaIcon::New => "f15b",
+            FaIcon::Open => "f07c",
+            FaIcon::Save => "f0c7",
+            FaIcon::Number0 => "30",
+            FaIcon::Number1 => "31",
+            FaIcon::Number2 => "32",
+            FaIcon::Number3 => "33",
+            FaIcon::Number4 => "34",
+            FaIcon::Number5 => "35",
+            FaIcon::Number6 => "36",
+            FaIcon::Number7 => "37",
+            FaIcon::Number8 => "38",
+            FaIcon::Number9 => "39",
+        }
+    }
+}
