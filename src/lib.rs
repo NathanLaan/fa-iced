@@ -116,11 +116,11 @@ pub const FA_ICON_CIRCLE_XMARK: &str = "f057";
 // Settings/Options/Utility
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/screwdriver-wrench
-pub const FA_ICON_CIRCLE_BARS: &str = "f0c9";
+/// Font Awesome Unicode string for https://fontawesome.com/icons/bars
+pub const FA_ICON_BARS: &str = "f0c9";
 
 /// Font Awesome Unicode string for https://fontawesome.com/icons/gear
-pub const FA_ICON_CIRCLE_GEAR: &str = "f013";
+pub const FA_ICON_GEAR: &str = "f013";
 
 /// Font Awesome Unicode string for https://fontawesome.com/icons/screwdriver-wrench
-pub const FA_ICON_CIRCLE_SCREWDRIVER_WRENCH: &str = "f7d9";
+pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
