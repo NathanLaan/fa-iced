@@ -16,7 +16,7 @@ impl Default for IconTestApp {
 
 impl IconTestApp {
     fn new() -> (Self, Task<Message>) {
-        load_font_fontawesome();
+        load_font_fontawesome_ttf();
         let app = IconTestApp {};
         (
             app,
@@ -35,7 +35,7 @@ impl IconTestApp {
     fn view(&self) -> Element<Message> {
         column![
             text("Should show a user icon below:"),
-            iced_text_icon_regular::<Message>(FA_ICON_USER)
+            iced_text_icon_regular::<Message>(FA_ICON_USER, 32)
         ]
             .padding(40)
             .spacing(20)

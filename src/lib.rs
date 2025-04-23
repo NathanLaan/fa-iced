@@ -34,7 +34,7 @@ use std::fmt;
 //     family: Family::Name("Font Awesome 6 Brands"),
 //     ..Font::DEFAULT
 // };
-// 
+//
 // pub fn fa_font(style: FaStyle) -> Font {
 //     match style {
 //         FaStyle::Regular => FONT_FA_REGULAR,
@@ -42,11 +42,11 @@ use std::fmt;
 //         FaStyle::Brands => FONT_FA_BRANDS,
 //     }
 // }
-// 
+//
 // pub fn iced_fa_icon<'a, Message>(code: &str, style: FaStyle) -> Element<'a, Message> {
 //     let code_u32 = u32::from_str_radix(code, 16).unwrap();
 //     let unicode_char = char::from_u32(code_u32).unwrap();
-// 
+//
 //     text(unicode_char)
 //         .font(fa_font(style))
 //         .size(32)
@@ -56,9 +56,19 @@ use std::fmt;
 
 
 ///
-/// Load Font Awesome files. Should only be called once.
+/// Load Font Awesome TTF files. Should only be called once.
 ///
-pub fn load_font_fontawesome() {
+pub fn load_font_fontawesome_ttf() {
+    let mut font_system = font_system().write().unwrap();
+    font_system.load_font(Cow::from(FONT_DATA_FA_REGULAR_TTF));
+    font_system.load_font(Cow::from(FONT_DATA_FA_BRANDS_TTF));
+    font_system.load_font(Cow::from(FONT_DATA_FA_SOLID_TTF));
+}
+
+///
+/// Load Font Awesome OTF files. Should only be called once.
+///
+pub fn load_font_fontawesome_otf() {
     let mut font_system = font_system().write().unwrap();
     font_system.load_font(Cow::from(FONT_DATA_FA_REGULAR_TTF));
     font_system.load_font(Cow::from(FONT_DATA_FA_BRANDS_TTF));
@@ -70,10 +80,10 @@ pub fn load_font_fontawesome() {
 ///
 /// Uses `FONT_FA_REGULAR`.
 ///
-pub fn iced_text_icon_regular<'a, Message>(code: &str) -> Element<'a, Message> {
+pub fn iced_text_icon_regular<'a, Message>(code: &str, size: u16) -> Element<'a, Message> {
     let code_u32 = u32::from_str_radix(&code, 16).unwrap();
     let unicode_char = char::from_u32(code_u32).unwrap();
-    text(unicode_char).font(FONT_FA_REGULAR).into()
+    text(unicode_char).font(FONT_FA_REGULAR).size(size).into()
 }
 
 ///
@@ -81,10 +91,10 @@ pub fn iced_text_icon_regular<'a, Message>(code: &str) -> Element<'a, Message> {
 ///
 /// Uses `FONT_FA_SOLID`.
 ///
-pub fn iced_text_icon_solid<'a, Message>(code: &str) -> Element<'a, Message> {
+pub fn iced_text_icon_solid<'a, Message>(code: &str, size: u16) -> Element<'a, Message> {
     let code_u32 = u32::from_str_radix(&code, 16).unwrap();
     let unicode_char = char::from_u32(code_u32).unwrap();
-    text(unicode_char).font(FONT_FA_SOLID).into()
+    text(unicode_char).font(FONT_FA_SOLID).size(size).into()
 }
 
 ///
@@ -105,7 +115,7 @@ pub const FONT_FA_REGULAR: Font = Font {
 
 pub const FONT_FA_SOLID: Font = Font {
     family: Family::Name("Font Awesome 6 Free"),
-    weight: Weight::Bold, // Solid weights are bold
+    weight: Weight::Black, // Solid weights are bold
     ..Font::DEFAULT
 };
 

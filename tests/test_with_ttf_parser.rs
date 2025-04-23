@@ -82,19 +82,19 @@ fn output_all_names_for(data: &[u8]) {
 #[test]
 #[ignore]
 fn test_font_data_fa_regular() {
-    load_font_fontawesome();
+    load_font_fontawesome_ttf();
     test_font(FONT_DATA_FA_REGULAR_OTF);
 }
 
 #[test]
 fn test_font_data_fa_solid() {
-    load_font_fontawesome();
+    load_font_fontawesome_ttf();
     test_font(FONT_DATA_FA_SOLID_OTF);
 }
 
 
 fn test_font(font_data: &[u8]) {
-    load_font_fontawesome();
+    load_font_fontawesome_ttf();
     // Parse the font from raw bytes
     let face = Face::parse(font_data, 0)
         .expect("Failed to parse font data");
