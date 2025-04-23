@@ -7,10 +7,10 @@
 use std::borrow::Cow;
 use iced::advanced::graphics::text::font_system;
 use iced::{Element, Font};
-use iced::font::Family;
+use iced::font::{Family, Weight};
 use iced::widget::text;
 use std::fmt;
-use std::str::FromStr;
+
 
 ///
 /// Load Font Awesome files. Should only be called once.
@@ -27,10 +27,21 @@ pub fn load_font_fontawesome() {
 ///
 /// Uses `FONT_FA_REGULAR`.
 ///
-pub fn iced_text_icon<'a, Message>(code: &str) -> Element<'a, Message> {
+pub fn iced_text_icon_regular<'a, Message>(code: &str) -> Element<'a, Message> {
     let code_u32 = u32::from_str_radix(&code, 16).unwrap();
     let unicode_char = char::from_u32(code_u32).unwrap();
     text(unicode_char).font(FONT_FA_REGULAR).into()
+}
+
+///
+/// Create an iced `text` element containing the specified Font Awesome icon.
+///
+/// Uses `FONT_FA_SOLID`.
+///
+pub fn iced_text_icon_solid<'a, Message>(code: &str) -> Element<'a, Message> {
+    let code_u32 = u32::from_str_radix(&code, 16).unwrap();
+    let unicode_char = char::from_u32(code_u32).unwrap();
+    text(unicode_char).font(FONT_FA_SOLID).into()
 }
 
 ///
@@ -41,17 +52,31 @@ pub const FONT_FA_REGULAR: Font = Font {
     ..Font::DEFAULT
 };
 
+///
+/// The "Regular" version of Font Awesome version 6.
+///
+// pub const FONT_FA_SOLID: Font = Font {
+//     family: Family::Name("Font Awesome 6 Free"),
+//     ..Font::DEFAULT
+// };
+
+pub const FONT_FA_SOLID: Font = Font {
+    family: Family::Name("Font Awesome 6 Free"),
+    weight: Weight::Bold, // Solid weights are bold
+    ..Font::DEFAULT
+};
+
 //
 // Font data
 //
 
-const FONT_DATA_FA_REGULAR: &[u8] =
+pub const FONT_DATA_FA_REGULAR: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-regular-400.otf");
 
-const FONT_DATA_FA_BRANDS: &[u8] =
+pub const FONT_DATA_FA_BRANDS: &[u8] =
     include_bytes!("../fonts/font-awesome-6-brands-regular-400.otf");
 
-const FONT_DATA_FA_SOLID: &[u8] =
+pub const FONT_DATA_FA_SOLID: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-solid-900.otf");
 
 //
@@ -122,9 +147,13 @@ pub const FA_ICON_CIRCLE_XMARK: &str = "f057";
 pub const FA_ICON_BARS: &str = "f0c9";
 
 /// Font Awesome Unicode string for https://fontawesome.com/icons/gear
+///
+/// Only available in SOLID variant.
 pub const FA_ICON_GEAR: &str = "f013";
 
 /// Font Awesome Unicode string for https://fontawesome.com/icons/screwdriver-wrench
+///
+/// Only available in SOLID variant.
 pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
 
 

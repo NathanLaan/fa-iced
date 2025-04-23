@@ -4,6 +4,13 @@ A [Font Awesome](https://fontawesome.com/) library written in [Rust](https://www
 
 Currently build against [iced](https://iced.rs/) version 0.13.1.
 
+## Testing
+
+```bash
+cargo test                # Run unit tests
+cargo test -- --ignored   # Manually run integration tests
+```
+
 ## References
 
 - [Rust](https://www.rust-lang.org/)
