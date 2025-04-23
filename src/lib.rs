@@ -12,14 +12,57 @@ use iced::widget::text;
 use std::fmt;
 
 
+//
+// TODO: FUTURE API
+//
+// pub enum FaStyle {
+//     Regular,
+//     Solid,
+//     Brands,
+// }
+// pub const FONT_FA_REGULAR: Font = Font {
+//     family: Family::Name("Font Awesome 6 Free"),
+//     ..Font::DEFAULT
+// };
+//
+// pub const FONT_FA_SOLID: Font = Font {
+//     family: Family::Name("Font Awesome 6 Free Solid"),
+//     ..Font::DEFAULT
+// };
+//
+// pub const FONT_FA_BRANDS: Font = Font {
+//     family: Family::Name("Font Awesome 6 Brands"),
+//     ..Font::DEFAULT
+// };
+// 
+// pub fn fa_font(style: FaStyle) -> Font {
+//     match style {
+//         FaStyle::Regular => FONT_FA_REGULAR,
+//         FaStyle::Solid => FONT_FA_SOLID,
+//         FaStyle::Brands => FONT_FA_BRANDS,
+//     }
+// }
+// 
+// pub fn iced_fa_icon<'a, Message>(code: &str, style: FaStyle) -> Element<'a, Message> {
+//     let code_u32 = u32::from_str_radix(code, 16).unwrap();
+//     let unicode_char = char::from_u32(code_u32).unwrap();
+// 
+//     text(unicode_char)
+//         .font(fa_font(style))
+//         .size(32)
+//         .into()
+// }
+
+
+
 ///
 /// Load Font Awesome files. Should only be called once.
 ///
 pub fn load_font_fontawesome() {
     let mut font_system = font_system().write().unwrap();
-    font_system.load_font(Cow::from(FONT_DATA_FA_REGULAR));
-    font_system.load_font(Cow::from(FONT_DATA_FA_BRANDS));
-    font_system.load_font(Cow::from(FONT_DATA_FA_SOLID));
+    font_system.load_font(Cow::from(FONT_DATA_FA_REGULAR_TTF));
+    font_system.load_font(Cow::from(FONT_DATA_FA_BRANDS_TTF));
+    font_system.load_font(Cow::from(FONT_DATA_FA_SOLID_TTF));
 }
 
 ///
@@ -70,14 +113,23 @@ pub const FONT_FA_SOLID: Font = Font {
 // Font data
 //
 
-pub const FONT_DATA_FA_REGULAR: &[u8] =
+pub const FONT_DATA_FA_REGULAR_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-regular-400.otf");
 
-pub const FONT_DATA_FA_BRANDS: &[u8] =
+pub const FONT_DATA_FA_BRANDS_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-brands-regular-400.otf");
 
-pub const FONT_DATA_FA_SOLID: &[u8] =
+pub const FONT_DATA_FA_SOLID_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-solid-900.otf");
+
+pub const FONT_DATA_FA_REGULAR_TTF: &[u8] =
+    include_bytes!("../fonts/fa-regular-400.ttf");
+
+pub const FONT_DATA_FA_BRANDS_TTF: &[u8] =
+    include_bytes!("../fonts/fa-brands-400.ttf");
+
+pub const FONT_DATA_FA_SOLID_TTF: &[u8] =
+    include_bytes!("../fonts/fa-solid-900.ttf");
 
 //
 // File operations
