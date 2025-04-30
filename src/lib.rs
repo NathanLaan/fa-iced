@@ -78,9 +78,10 @@ pub fn load_font_fontawesome_otf() {
 /// Uses `FONT_FA_REGULAR`.
 ///
 pub fn iced_text_icon_regular<'a, Message>(code: &str, size: u16) -> Element<'a, Message> {
-    let code_u32 = u32::from_str_radix(&code, 16).unwrap();
-    let unicode_char = char::from_u32(code_u32).unwrap();
-    text(unicode_char).font(FONT_FA_REGULAR).size(size).into()
+    text(fa_unicode_char(&code))
+        .font(FONT_FA_REGULAR)
+        .size(size)
+        .into()
 }
 
 ///
@@ -89,9 +90,19 @@ pub fn iced_text_icon_regular<'a, Message>(code: &str, size: u16) -> Element<'a,
 /// Uses `FONT_FA_SOLID`.
 ///
 pub fn iced_text_icon_solid<'a, Message>(code: &str, size: u16) -> Element<'a, Message> {
+    text(fa_unicode_char(&code))
+        .font(FONT_FA_SOLID)
+        .size(size)
+        .into()
+}
+
+///
+/// Convert the Font Awesome `code` into the corresponding Unicode char.
+///
+pub fn fa_unicode_char(code: &str) -> char {
     let code_u32 = u32::from_str_radix(&code, 16).unwrap();
     let unicode_char = char::from_u32(code_u32).unwrap();
-    text(unicode_char).font(FONT_FA_SOLID).size(size).into()
+    unicode_char
 }
 
 ///
