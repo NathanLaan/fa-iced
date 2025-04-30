@@ -1,7 +1,8 @@
-use iced::{
-    Task, Element, Length, widget::{column, text},
-};
 use fa_iced::*;
+use iced::{
+    Element, Length, Task,
+    widget::{column, text},
+};
 
 struct IconTestApp;
 
@@ -18,10 +19,7 @@ impl IconTestApp {
     fn new() -> (Self, Task<Message>) {
         load_font_fontawesome_ttf();
         let app = IconTestApp {};
-        (
-            app,
-            Task::none(),
-        )
+        (app, Task::none())
     }
 
     fn title(&self) -> String {
@@ -37,11 +35,11 @@ impl IconTestApp {
             text("Should show a user icon below:"),
             iced_text_icon_regular::<Message>(FA_ICON_USER, 32)
         ]
-            .padding(40)
-            .spacing(20)
-            .width(Length::Fill)
-            .height(Length::Fill)
-            .into()
+        .padding(40)
+        .spacing(20)
+        .width(Length::Fill)
+        .height(Length::Fill)
+        .into()
     }
 }
 
@@ -49,7 +47,7 @@ impl IconTestApp {
 #[ignore]
 fn test_icon_rendering() -> iced::Result {
     let mut window_settings = iced::window::Settings::default();
-    window_settings.size = iced::Size::new(1200.0,1024.0);
+    window_settings.size = iced::Size::new(1200.0, 1024.0);
     iced::application(IconTestApp::title, IconTestApp::update, IconTestApp::view)
         .window(window_settings)
         .run()
@@ -57,7 +55,7 @@ fn test_icon_rendering() -> iced::Result {
 
 fn main() -> iced::Result {
     let mut window_settings = iced::window::Settings::default();
-    window_settings.size = iced::Size::new(1200.0,1024.0);
+    window_settings.size = iced::Size::new(1200.0, 1024.0);
     iced::application(IconTestApp::title, IconTestApp::update, IconTestApp::view)
         .window(window_settings)
         .run()

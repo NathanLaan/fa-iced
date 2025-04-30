@@ -10,11 +10,8 @@
 //!         --> test_icon
 //!
 
-use ttf_parser::{Face, name_id};
 use fa_iced::*;
-
-
-
+use ttf_parser::{Face, name_id};
 
 #[test]
 fn check_fa_font_names() {
@@ -23,24 +20,29 @@ fn check_fa_font_names() {
 }
 
 fn print_font_names(data: &[u8]) {
-    let face = Face::parse(data, 0)
-        .expect("Failed to parse font data");
+    let face = Face::parse(data, 0).expect("Failed to parse font data");
 
-    let family_name = face.names().into_iter()
+    let family_name = face
+        .names()
+        .into_iter()
         .find(|name| name.name_id == name_id::FULL_NAME)
         .and_then(|name| name.to_string())
         .unwrap_or_else(|| "UNKNOWN".into());
 
     println!("Full name: {}", family_name);
 
-    let font_family = face.names().into_iter()
+    let font_family = face
+        .names()
+        .into_iter()
         .find(|name| name.name_id == name_id::FAMILY)
         .and_then(|name| name.to_string())
         .unwrap_or_else(|| "UNKNOWN".into());
 
     println!("Family: {}", font_family);
 
-    let subfamily = face.names().into_iter()
+    let subfamily = face
+        .names()
+        .into_iter()
         .find(|name| name.name_id == name_id::SUBFAMILY)
         .and_then(|name| name.to_string())
         .unwrap_or_else(|| "UNKNOWN".into());
@@ -55,17 +57,12 @@ fn output_all_names() {
 }
 
 fn output_all_names_for(data: &[u8]) {
-    let face = Face::parse(data, 0)
-        .expect("Failed to parse font data");
+    let face = Face::parse(data, 0).expect("Failed to parse font data");
 
     for name in face.names().into_iter() {
         println!(
             "Name ID: {:<2} | Platform: {:?} | Encoding: {:<2} | Language: {:<2} | Raw bytes: {:?}",
-            name.name_id,
-            name.platform_id,
-            name.encoding_id,
-            name.language_id,
-            name.name
+            name.name_id, name.platform_id, name.encoding_id, name.language_id, name.name
         );
 
         if let Some(string) = name.to_string() {
@@ -77,7 +74,6 @@ fn output_all_names_for(data: &[u8]) {
         println!("---");
     }
 }
-
 
 #[test]
 #[ignore]
@@ -92,12 +88,10 @@ fn test_font_data_fa_solid() {
     test_font(FONT_DATA_FA_SOLID_OTF);
 }
 
-
 fn test_font(font_data: &[u8]) {
     load_font_fontawesome_ttf();
     // Parse the font from raw bytes
-    let face = Face::parse(font_data, 0)
-        .expect("Failed to parse font data");
+    let face = Face::parse(font_data, 0).expect("Failed to parse font data");
 
     test_icon(&face, FA_ICON_0);
     test_icon(&face, FA_ICON_1);
@@ -119,14 +113,10 @@ fn test_font(font_data: &[u8]) {
     test_icon(&face, FA_ICON_GEAR);
 }
 
-
 fn test_icon(face: &Face, icon: &str) {
-
     // Convert the Font Awesome user icon hex code into a char
-    let code_u32 = u32::from_str_radix(icon, 16)
-        .expect("Invalid icon code");
-    let icon_char = char::from_u32(code_u32)
-        .expect("Invalid unicode char");
+    let code_u32 = u32::from_str_radix(icon, 16).expect("Invalid icon code");
+    let icon_char = char::from_u32(code_u32).expect("Invalid unicode char");
 
     // Check that the glyph for the icon character exists
     let glyph_id = face.glyph_index(icon_char);
@@ -134,6 +124,7 @@ fn test_icon(face: &Face, icon: &str) {
     assert!(
         glyph_id.is_some(),
         "Glyph for icon '{}' (U+{:X}) not found in font",
-        icon_char, code_u32
+        icon_char,
+        code_u32
     );
 }

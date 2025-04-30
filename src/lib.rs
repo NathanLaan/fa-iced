@@ -4,13 +4,12 @@
 //! Wrapper for Font Awesome icons.
 //!
 
-use std::borrow::Cow;
 use iced::advanced::graphics::text::font_system;
-use iced::{Element, Font};
 use iced::font::{Family, Weight};
 use iced::widget::text;
+use iced::{Element, Font};
+use std::borrow::Cow;
 use std::fmt;
-
 
 //
 // TODO: FUTURE API
@@ -52,8 +51,6 @@ use std::fmt;
 //         .size(32)
 //         .into()
 // }
-
-
 
 ///
 /// Load Font Awesome TTF files. Should only be called once.
@@ -132,14 +129,11 @@ pub const FONT_DATA_FA_BRANDS_OTF: &[u8] =
 pub const FONT_DATA_FA_SOLID_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-solid-900.otf");
 
-pub const FONT_DATA_FA_REGULAR_TTF: &[u8] =
-    include_bytes!("../fonts/fa-regular-400.ttf");
+pub const FONT_DATA_FA_REGULAR_TTF: &[u8] = include_bytes!("../fonts/fa-regular-400.ttf");
 
-pub const FONT_DATA_FA_BRANDS_TTF: &[u8] =
-    include_bytes!("../fonts/fa-brands-400.ttf");
+pub const FONT_DATA_FA_BRANDS_TTF: &[u8] = include_bytes!("../fonts/fa-brands-400.ttf");
 
-pub const FONT_DATA_FA_SOLID_TTF: &[u8] =
-    include_bytes!("../fonts/fa-solid-900.ttf");
+pub const FONT_DATA_FA_SOLID_TTF: &[u8] = include_bytes!("../fonts/fa-solid-900.ttf");
 
 //
 // File operations
@@ -218,6 +212,22 @@ pub const FA_ICON_GEAR: &str = "f013";
 /// Only available in SOLID variant.
 pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
 
+//
+// ID cards and badges
+//
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/id-card
+pub const FA_ICON_ID_CARD: &str = "f2c2";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/id-card-clip
+pub const FA_ICON_ID_CARD_CLIP: &str = "f47f";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/id-badge
+pub const FA_ICON_ID_BADGE: &str = "f2c1";
+
+//
+// Enum
+//
 
 ///
 /// Implementation of Font Awesome icons as enum.
@@ -243,6 +253,9 @@ pub enum FaIcon {
     Number7,
     Number8,
     Number9,
+    IdCard,
+    IdCardClip,
+    IdBadge,
 }
 
 impl fmt::Display for FaIcon {
@@ -273,6 +286,9 @@ impl FaIcon {
             FaIcon::Number7 => "37",
             FaIcon::Number8 => "38",
             FaIcon::Number9 => "39",
+            FaIcon::IdCard => "f2c2",
+            FaIcon::IdCardClip => "f47f",
+            FaIcon::IdBadge => "f2c1",
         }
     }
 }
