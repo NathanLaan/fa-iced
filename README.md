@@ -1,6 +1,6 @@
 # Rust FA-Iced
 
-A [Font Awesome](https://fontawesome.com/) library written in [Rust](https://www.rust-lang.org/) using the [iced](https://iced.rs/) UI framework.
+A basic [Font Awesome](https://fontawesome.com/) library written in [Rust](https://www.rust-lang.org/), primarily intended for use with the [iced](https://iced.rs/) UI framework.
 
 Currently build against [iced](https://iced.rs/) version 0.13.1.
 
