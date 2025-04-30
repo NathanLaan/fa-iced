@@ -95,7 +95,7 @@ pub fn iced_text_icon_solid<'a, Message>(code: &str, size: u16) -> Element<'a, M
 }
 
 ///
-/// The "Regular" version of Font Awesome version 6.
+/// The "Regular" version of Font Awesome version 6 Free.
 ///
 pub const FONT_FA_REGULAR: Font = Font {
     family: Family::Name("Font Awesome 6 Free"),
@@ -103,13 +103,8 @@ pub const FONT_FA_REGULAR: Font = Font {
 };
 
 ///
-/// The "Regular" version of Font Awesome version 6.
+/// The "Solid" version of Font Awesome version 6 Free.
 ///
-// pub const FONT_FA_SOLID: Font = Font {
-//     family: Family::Name("Font Awesome 6 Free"),
-//     ..Font::DEFAULT
-// };
-
 pub const FONT_FA_SOLID: Font = Font {
     family: Family::Name("Font Awesome 6 Free"),
     weight: Weight::Black, // Solid weights are bold
@@ -120,19 +115,37 @@ pub const FONT_FA_SOLID: Font = Font {
 // Font data
 //
 
+///
+/// Font data for Font Awesome Regular OTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_REGULAR_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-regular-400.otf");
 
+///
+/// Font data for Font Awesome Brands OTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_BRANDS_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-brands-regular-400.otf");
 
+///
+/// Font data for Font Awesome Solid OTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_SOLID_OTF: &[u8] =
     include_bytes!("../fonts/font-awesome-6-free-solid-900.otf");
 
+///
+/// Font data for Font Awesome Regular TTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_REGULAR_TTF: &[u8] = include_bytes!("../fonts/fa-regular-400.ttf");
 
+///
+/// Font data for Font Awesome Brands TTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_BRANDS_TTF: &[u8] = include_bytes!("../fonts/fa-brands-400.ttf");
 
+///
+/// Font data for Font Awesome Solid TTF. Loaded using `include_bytes!()`.
+///
 pub const FONT_DATA_FA_SOLID_TTF: &[u8] = include_bytes!("../fonts/fa-solid-900.ttf");
 
 //
