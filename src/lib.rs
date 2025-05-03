@@ -250,6 +250,25 @@ pub const FA_ICON_ID_CARD_CLIP: &str = "f47f";
 pub const FA_ICON_ID_BADGE: &str = "f2c1";
 
 //
+// Edit
+//
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/pen-to-square
+pub const FA_ICON_EDIT: &str = "f044";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/user_minus
+pub const FA_ICON_USER_MINUS: &str = "f503";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/user_plus
+pub const FA_ICON_USER_PLUS: &str = "f234";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/user_xmark
+pub const FA_ICON_USER_XMARK: &str = "f235";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/minus
+pub const FA_ICON_MINUS: &str = "f068";
+
+//
 // Enum
 //
 
