@@ -949,7 +949,7 @@ dependencies = [
 
 [[package]]
 name = "fa-iced"
-version = "0.5.2"
+version = "0.5.3"
 dependencies = [
  "iced",
  "ttf-parser 0.19.2",

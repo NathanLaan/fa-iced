@@ -4,6 +4,10 @@ A basic [Font Awesome](https://fontawesome.com/) library written in [Rust](https
 
 Currently built against [iced](https://iced.rs/) version 0.13.1.
 
+## Changelog
+
+- v0.5.3 - Add list icons.
+
 ## Testing
 
 ```bash

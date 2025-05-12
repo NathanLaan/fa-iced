@@ -269,7 +269,38 @@ pub const FA_ICON_USER_XMARK: &str = "f235";
 pub const FA_ICON_MINUS: &str = "f068";
 
 //
-// Enum
+// List Icons
+//
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list
+pub const FA_ICON_LIST: &str = "f03a";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list-ul
+pub const FA_ICON_LIST_UL: &str = "f0ca";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list-ol
+pub const FA_ICON_LIST_OL: &str = "f0cb";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list-tree
+pub const FA_ICON_LIST_TREE: &str = "e1d2";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list-timeline
+pub const FA_ICON_LIST_TIMELINE: &str = "e1d1";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/list-radio
+pub const FA_ICON_LIST_RADIO: &str = "e1d0";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/table-list
+pub const FA_ICON_TABLE_LIST: &str = "f00b";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/square-list
+pub const FA_ICON_SQUARE_LIST: &str = "e489";
+
+/// Font Awesome Unicode string for https://fontawesome.com/icons/rectangle-list
+pub const FA_ICON_RECTANGLE_LIST: &str = "f022";
+
+//
+// FaIcon Enum
 //
 
 ///
