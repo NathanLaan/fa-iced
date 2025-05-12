@@ -163,9 +163,6 @@ pub const FONT_DATA_FA_SOLID_TTF: &[u8] = include_bytes!("../fonts/fa-solid-900.
 // File operations
 //
 
-/// Font Awesome Unicode string for `https://fontawesome.com/icons/user`.
-pub const FA_ICON_USER: &str = "f007";
-
 /// Font Awesome Unicode string for `https://fontawesome.com/icons/file`.
 pub const FA_ICON_NEW: &str = "f15b";
 
@@ -213,25 +210,25 @@ pub const FA_ICON_9: &str = "39";
 // Circle
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/circle-check
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-check`
 pub const FA_ICON_CIRCLE_CHECK: &str = "f058";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/circle-xmark
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-xmark`
 pub const FA_ICON_CIRCLE_XMARK: &str = "f057";
 
 //
 // Settings/Options/Utility
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/bars
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/bars`
 pub const FA_ICON_BARS: &str = "f0c9";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/gear
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/gear`
 ///
 /// Only available in SOLID variant.
 pub const FA_ICON_GEAR: &str = "f013";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/screwdriver-wrench
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/screwdriver-wrench`
 ///
 /// Only available in SOLID variant.
 pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
@@ -240,63 +237,82 @@ pub const FA_ICON_SCREWDRIVER_WRENCH: &str = "f7d9";
 // ID cards and badges
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/id-card
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/id-card`
 pub const FA_ICON_ID_CARD: &str = "f2c2";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/id-card-clip
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/id-card-clip`
 pub const FA_ICON_ID_CARD_CLIP: &str = "f47f";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/id-badge
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/id-badge`
 pub const FA_ICON_ID_BADGE: &str = "f2c1";
+
+//
+// Users
+//
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/user`.
+pub const FA_ICON_USER: &str = "f007";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/users`.
+pub const FA_ICON_USERS: &str = "f0c0";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/users-between-lines`.
+pub const FA_ICON_USERS_BETWEEN_LINES: &str = "e591";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/users-line`.
+pub const FA_ICON_USERS_LINE: &str = "e592";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/users-rectangle`.
+pub const FA_ICON_USERS_RECTANGLE: &str = "e594";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/user_minus`
+pub const FA_ICON_USER_MINUS: &str = "f503";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/user_plus`
+pub const FA_ICON_USER_PLUS: &str = "f234";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/user_xmark`
+pub const FA_ICON_USER_XMARK: &str = "f235";
 
 //
 // Edit
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/pen-to-square
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/pen-to-square`
 pub const FA_ICON_EDIT: &str = "f044";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/user_minus
-pub const FA_ICON_USER_MINUS: &str = "f503";
-
-/// Font Awesome Unicode string for https://fontawesome.com/icons/user_plus
-pub const FA_ICON_USER_PLUS: &str = "f234";
-
-/// Font Awesome Unicode string for https://fontawesome.com/icons/user_xmark
-pub const FA_ICON_USER_XMARK: &str = "f235";
-
-/// Font Awesome Unicode string for https://fontawesome.com/icons/minus
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/minus`
 pub const FA_ICON_MINUS: &str = "f068";
 
 //
 // List Icons
 //
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list`
 pub const FA_ICON_LIST: &str = "f03a";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list-ul
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list-ul`
 pub const FA_ICON_LIST_UL: &str = "f0ca";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list-ol
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list-ol`
 pub const FA_ICON_LIST_OL: &str = "f0cb";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list-tree
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list-tree`
 pub const FA_ICON_LIST_TREE: &str = "e1d2";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list-timeline
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list-timeline`
 pub const FA_ICON_LIST_TIMELINE: &str = "e1d1";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/list-radio
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/list-radio`
 pub const FA_ICON_LIST_RADIO: &str = "e1d0";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/table-list
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/table-list`
 pub const FA_ICON_TABLE_LIST: &str = "f00b";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/square-list
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/square-list`
 pub const FA_ICON_SQUARE_LIST: &str = "e489";
 
-/// Font Awesome Unicode string for https://fontawesome.com/icons/rectangle-list
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/rectangle-list`
 pub const FA_ICON_RECTANGLE_LIST: &str = "f022";
 
 //
