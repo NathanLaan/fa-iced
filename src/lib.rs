@@ -300,7 +300,7 @@ pub const FA_ICON_PLUS: &str = "2b";
 pub const FA_ICON_SQUARE_PLUS: &str = "f0fe";
 
 /// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-plus`
-pub const FA_ICON_SQUARE_PLUS: &str = "f055";
+pub const FA_ICON_CIRCLE_PLUS: &str = "f055";
 
 /// Font Awesome Unicode string for `https://fontawesome.com/icons/shield-plus`
 pub const FA_ICON_SHIELD_PLUS: &str = "e24a";
