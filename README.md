@@ -6,7 +6,8 @@ Currently built against [iced](https://iced.rs/) version 0.13.1.
 
 ## Changelog
 
-- v0.5.4: Additional user icons. Cleaned up code docs.
+- v0.5.5: Add additional plus and minus icons.
+- v0.5.4: Add additional user icons. Cleaned up code docs.
 - v0.5.3: Add list icons.
 
 ## Testing

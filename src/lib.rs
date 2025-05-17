@@ -284,6 +284,27 @@ pub const FA_ICON_EDIT: &str = "f044";
 /// Font Awesome Unicode string for `https://fontawesome.com/icons/minus`
 pub const FA_ICON_MINUS: &str = "f068";
 
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/square-minus`
+pub const FA_ICON_SQUARE_MINUS: &str = "f146";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-minus`
+pub const FA_ICON_CIRCLE_MINUS: &str = "f056";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/shield-minus`
+pub const FA_ICON_SHIELD_MINUS: &str = "e249";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/plus`
+pub const FA_ICON_PLUS: &str = "2b";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/square-plus`
+pub const FA_ICON_SQUARE_PLUS: &str = "f0fe";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-plus`
+pub const FA_ICON_SQUARE_PLUS: &str = "f055";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/shield-plus`
+pub const FA_ICON_SHIELD_PLUS: &str = "e24a";
+
 //
 // List Icons
 //
