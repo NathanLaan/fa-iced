@@ -337,6 +337,32 @@ pub const FA_ICON_SQUARE_LIST: &str = "e489";
 pub const FA_ICON_RECTANGLE_LIST: &str = "f022";
 
 //
+// Info
+//
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/info`
+pub const FA_ICON_INFO: &str = "f129";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-info`
+pub const FA_ICON_CIRCLE_INFO: &str = "f05a";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/square-info`
+pub const FA_ICON_SQUARE_INFO: &str = "f30f";
+
+//
+// Question
+//
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/question`
+pub const FA_ICON_QUESTION: &str = "3f";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/circle-question`
+pub const FA_ICON_CIRCLE_QUESTION: &str = "f059";
+
+/// Font Awesome Unicode string for `https://fontawesome.com/icons/square-question`
+pub const FA_ICON_SQUARE_QUESTION: &str = "f2fd";
+
+//
 // FaIcon Enum
 //
 
